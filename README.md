@@ -6,4 +6,5 @@ harness for agents
 
 ```sh
 apm install --global git@github.com:ymkz/harness.git
+apm compile --global
 ```
