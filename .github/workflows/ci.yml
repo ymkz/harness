@@ -27,4 +27,3 @@ jobs:
         with:
           sarif_file: ${{ steps.apm.outputs.audit-report-path }}
           category: apm-audit
-      - run: echo 'harness'
