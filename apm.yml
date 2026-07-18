@@ -1,0 +1,13 @@
+name: harness
+version: 1.0.0
+description: agent harness distributor for me
+author: ymkz
+targets:
+  - agent-skills
+  - codex
+dependencies:
+  apm:
+    - mattpocock/skills/skills/productivity/handoff
+  mcp: []
+includes: auto
+scripts: {}
