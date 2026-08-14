@@ -6,8 +6,7 @@ targets:
   - agent-skills
   - codex
 dependencies:
-  apm:
-    - mattpocock/skills/skills/productivity/handoff
+  apm: []
   mcp: []
 includes: auto
 scripts: {}
