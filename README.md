@@ -18,10 +18,11 @@ apm compile --global
 
 ## 更新
 
-リポジトリへ変更をpushした後、利用環境でパッケージを更新してから設定ファイルを再生成します。
+リポジトリへ変更をpushした後、利用環境でパッケージを更新し、Skillなどを再配置してから設定ファイルを再生成します。
 
 ```sh
 apm update --global ymkz/harness
+apm install --global
 apm compile --global
 ```
 
@@ -29,6 +30,7 @@ apm compile --global
 
 ```sh
 apm update --global ymkz/harness --dry-run
+apm install --global --dry-run
 apm compile --global --dry-run
 ```
 
