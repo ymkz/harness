@@ -47,8 +47,18 @@ Review the same changes for efficiency:
 6. **Memory**: unbounded data structures, missing cleanup, event listener leaks
 7. **Overly broad operations**: reading entire files when only a portion is needed, loading all items when filtering for one
 
-## Phase 3: Fix Issues
+## Phase 3: Delegate Fixes to the Code Simplifier
 
-Wait for all three agents to complete. Aggregate their findings and fix each issue directly. If a finding is a false positive or not worth addressing, note it and move on — do not argue with the finding, just skip it.
+Wait for all three review agents to complete and aggregate their findings. Discard false positives and findings that are not worth addressing without arguing with them.
 
-When done, briefly summarize what was fixed (or confirm the code was already clean).
+Launch the `code-simplifier` agent defined in `.apm/agents/code-simplifier.agent.md`. Pass it:
+
+- The full diff reviewed in Phase 2
+- The aggregated, actionable findings from all three review agents
+- The paths of the files it may modify
+
+Instruct the agent to address every actionable finding while preserving behavior and limiting changes to the reviewed code. If the harness cannot launch a named agent directly, read `.apm/agents/code-simplifier.agent.md` and include its complete instructions in the spawned agent's task.
+
+## Phase 4: Verify and Summarize
+
+After the `code-simplifier` agent completes, inspect its changes and run the most relevant available tests or checks. Fix only issues caused by the simplification. Then briefly summarize what was fixed, what validation was run, and any findings that were intentionally skipped. If no changes were needed, confirm that the code was already clean.
