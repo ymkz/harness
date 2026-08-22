@@ -6,7 +6,11 @@ targets:
   - agent-skills
   - codex
 dependencies:
-  apm: []
+  apm:
+    - mattpocock/skills/skills/engineering/improve-codebase-architecture
+    - mattpocock/skills/skills/engineering/codebase-design
+    - mattpocock/skills/skills/engineering/domain-modeling
+    - mattpocock/skills/skills/productivity/grilling
   mcp: []
 includes: auto
 scripts: {}
