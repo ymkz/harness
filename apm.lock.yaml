@@ -1,7 +1,16 @@
 lockfile_version: '1'
-generated_at: '2026-08-22T14:35:50.879996+00:00'
+generated_at: '2026-08-22T14:59:04.481489+00:00'
 apm_version: 0.28.0
 dependencies:
+- repo_url: humanlayer/skills
+  name: show-me
+  host: github.com
+  resolved_commit: 3c2629142c5d437428269b1b722b08c0b87f574d
+  version: unknown
+  virtual_path: plugins/show-me/skills/show-me
+  is_virtual: true
+  package_type: claude_skill
+  content_hash: sha256:de32a72f802801f08a84641b467f2c6306d35a58ce5e59ea607ac3a993a18c91
 - repo_url: mattpocock/skills
   name: codebase-design
   host: github.com
