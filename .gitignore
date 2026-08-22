@@ -1,3 +1,7 @@
 
 # APM dependencies
 apm_modules/
+
+# APM deploy artifacts (bare install accidents)
+.agents/
+.codex/
