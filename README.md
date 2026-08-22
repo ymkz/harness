@@ -2,6 +2,15 @@
 
 エージェント向けの共通設定を配布するAPMパッケージです。
 
+## 注意: このリポジトリはグローバル管理用
+
+このリポジトリは `~/.agents/skills/` などのグローバル設定を管理・配布するためのソースです。
+リポジトリ内で `apm install` を実行すると、デプロイ成果物が `.agents/skills/` や `.codex/` に展開されてグローバル側と重複します。
+
+- スキルの追加・更新は `apm install --global` / `apm update --global` で行う
+- 生成物（`.agents/`、`.codex/`、`apm_modules/`）はコミットしない（`.gitignore` 済み）
+- 手書きのスキルは `~/.agents/skills/` 側を正とし、このリポジトリにコピーしない
+
 ## インストール
 
 ```sh
